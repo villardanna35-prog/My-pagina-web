@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página especial 🎀</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 25px 15px;
+      background: #641d2b;
+      font-family: Georgia, serif;
+      color: #642536;
+      text-align: center;
+    }
+
+    .marco {
+      max-width: 500px;
+      min-height: 85vh;
+      margin: auto;
+      padding: 12px;
+      border: 4px double #e9d9b8;
+      border-radius: 22px;
+      background: #f8edda;
+      box-shadow: 0 0 25px #310d18;
+    }
+
+    .interior {
+      min-height: calc(85vh - 32px);
+      padding: 30px 18px;
+      border: 2px dashed #c7a77e;
+      border-radius: 16px;
+    }
+
+    .moño {
+      font-size: 55px;
+      margin: 5px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 12px 0;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 12px 0;
+      border: 1px solid #b98a7b;
+      border-radius: 10px;
+      background: #fffaf1;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #8c263e;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #mensaje {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .adorno {
+      margin-top: 35px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <main class="marco">
+    <section class="interior">
+      <div class="moño">🎀</div>
+      <h1>Mi página especial</h1>
+      <p>Un pequeño rincón hecho con mucho amor.</p>
+
+      <hr>
+
+      <h2>¿Cómo te llamás?</h2>
+      <p>Escribí tu nombre para comenzar.</p>
+
+      <input id="nombre" type="text"
+        placeholder="Tu nombre...">
+
+      <button onclick="saludar()">
+        Entrar ♡
+      </button>
+
+      <p id="mensaje"></p>
+
+      <div class="adorno">୨୧ ♡ ୨୧</div>
+    </section>
+  </main>
+
+  <script>
+    function saludar() {
+      const nombre = document
+        .getElementById("nombre")
+        .value.trim();
+
+      const mensaje = document
+        .getElementById("mensaje");
+
+      if (nombre === "") {
+        mensaje.textContent =
+          "Primero escribí tu nombre ♡";
+      } else {
+        mensaje.textContent =
+          "¡Bienvenida, " + nombre + "! 🎀";
+      }
+    }
+  </script>
+</body>
+</html>
